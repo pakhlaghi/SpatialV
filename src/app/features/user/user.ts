@@ -3,4 +3,6 @@ export class User {
   public email: string;
   public dob: Date;
   public address: string;
+  public latitude: number;
+  public longitude: number;
 }

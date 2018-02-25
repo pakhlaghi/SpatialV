@@ -1,19 +1,11 @@
-<div>
-    <ul>
-        <li><input type="text" id="name" name="name" [(ngModel)]="user.name" required /></li>
-        <li><input type="email" id="email" [(ngModel)]="user.email" required/></li>
-        <li><input type="date" id="dob" [(ngModel)]="user.dob" required/></li>
-        <li><input type="address" id="address" [(ngModel)]="user.address" required /></li>
-        <button (click)="onSaveClick()">Save</button>
-    </ul>
-</div>
-
 <div class="container">
-    <h1>Angular 2 + Google Maps Places Autocomplete</h1>
-    <div class="form-group">
-        <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
-    </div>
+    <input type="text" id="name" name="name" [(ngModel)]="user.name" required />
+    <input type="email" id="email" [(ngModel)]="user.email" required/>
+    <input type="date" id="dob" [(ngModel)]="user.dob" required/>
+    <input [(ngModel)]="user.address" placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search [formControl]="searchControl">
     <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
         <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
     </agm-map>
+    <button (click)="onSaveClick()">Save</button>
+
 </div>
